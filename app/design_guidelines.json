@@ -1,0 +1,485 @@
+
+Action: read({
+    "request": {
+        "path": "/app/design_guidelines.json"
+    }
+})
+Observation: /app/design_guidelines.json: 1|{
+    2|  "theme": {
+        3|    "mode": "light",
+        4|    "archetype": "THE PERFORMANCE PRO / ENTERPRISE PRECISION",
+        5|    "primary_brand_color": "#373757",
+        6|    "description": "Enterprise SaaS design with deep slate navy (#373757) primary brand, warm technical off-white canvas (#F8FAFC), crisp border definitions (1px solid #E2E8F0), high-density data grids, and vibrant functional status indicators for SAP S/4HANA to FinSight data pipeline for Meridian Manufacturing Ltd (India)."7|
+    },
+    8|  "locale_conventions": {
+        9|    "region": "India (en-IN)",
+        10|    "currency_symbol": "₹",
+        11|    "currency_code": "INR",
+        12|    "number_formatting": "Indian numbering system (Lakhs '₹ X.XX L' and Crores '₹ X.XX Cr' for summaries, '₹ 1,23,456.78' for itemized ledger rows)",
+        13|    "date_format": "DD/MM/YYYY (IST) and ISO-8601 timestamps",
+        14|    "financial_year": "Indian Fiscal Year cycle (FY 2025-26: Q1 Apr-Jun, Q2 Jul-Sep, Q3 Oct-Dec, Q4 Jan-Mar)",
+        15|    "tax_framework": "Indian GST Regime (CGST + SGST for intra-state, IGST for inter-state transactions with 15-digit GSTINs)"16|
+    },
+    17|  "colors": {
+        18|    "surfaces": [
+            19|      {
+                20|        "name": "page",
+                21|        "kind": "solid",
+                22|        "bg": "#F8FAFC",
+                23|        "on_bg": "#0F172A",
+                24|        "on_bg_muted": "#475569",
+                25|        "roles": {
+                    26|          "link": "#1E293B",
+                    27|          "error": "#B91C1C",
+                    28|          "success": "#047857",
+                    29|          "warning": "#B45309",
+                    30|          "info": "#1D4ED8"31|
+                }
+32|
+            },
+            33|      {
+                34|        "name": "panel",
+                35|        "kind": "solid",
+                36|        "bg": "#FFFFFF",
+                37|        "on_bg": "#0F172A",
+                38|        "on_bg_muted": "#64748B",
+                39|        "roles": {
+                    40|          "border": "#E2E8F0",
+                    41|          "accent_badge": "#373757",
+                    42|          "subtle_hover": "#F1F5F9"43|
+                }
+44|
+            },
+            45|      {
+                46|        "name": "sidebar",
+                47|        "kind": "solid",
+                48|        "bg": "#1E1E38",
+                49|        "on_bg": "#F8FAFC",
+                50|        "on_bg_muted": "#94A3B8",
+                51|        "roles": {
+                    52|          "active_tab_bg": "#373757",
+                    53|          "active_tab_text": "#FFFFFF",
+                    54|          "hover_tab_bg": "#282846",
+                    55|          "brand_badge_bg": "#4E4E7B",
+                    56|          "border_right": "#2D2D4D"57|
+                }
+58|
+            },
+            59|      {
+                60|        "name": "header_nav",
+                61|        "kind": "solid",
+                62|        "bg": "#FFFFFF",
+                63|        "on_bg": "#0F172A",
+                64|        "on_bg_muted": "#64748B",
+                65|        "roles": {
+                    66|          "border_bottom": "#E2E8F0",
+                    67|          "status_live": "#10B981"68|
+                }
+69|
+            },
+            70|      {
+                71|        "name": "card_metric",
+                72|        "kind": "solid",
+                73|        "bg": "#FFFFFF",
+                74|        "on_bg": "#0F172A",
+                75|        "on_bg_muted": "#64748B",
+                76|        "roles": {
+                    77|          "trend_up": "#047857",
+                    78|          "trend_down": "#B91C1C",
+                    79|          "kpi_value": "#1E1E38"80|
+                }
+81|
+            },
+            82|      {
+                83|        "name": "code_viewer",
+                84|        "kind": "solid",
+                85|        "bg": "#0F172A",
+                86|        "on_bg": "#E2E8F0",
+                87|        "on_bg_muted": "#94A3B8",
+                88|        "roles": {
+                    89|          "json_key": "#38BDF8",
+                    90|          "json_string": "#34D399",
+                    91|          "json_number": "#FBBF24",
+                    92|          "json_boolean": "#F472B6"93|
+                }
+94|
+            },
+            95|      {
+                96|        "name": "badge_sap",
+                97|        "kind": "solid",
+                98|        "bg": "#E0E7FF",
+                99|        "on_bg": "#312E81",
+                100|        "on_bg_muted": "#3730A3"101|
+            },
+            102|      {
+                103|        "name": "badge_finsight",
+                104|        "kind": "solid",
+                105|        "bg": "#EDE9FE",
+                106|        "on_bg": "#4C1D95",
+                107|        "on_bg_muted": "#5B21B6"108|
+            },
+            109|      {
+                110|        "name": "badge_success",
+                111|        "kind": "solid",
+                112|        "bg": "#DCFCE7",
+                113|        "on_bg": "#14532D",
+                114|        "on_bg_muted": "#166534"115|
+            },
+            116|      {
+                117|        "name": "badge_failed",
+                118|        "kind": "solid",
+                119|        "bg": "#FEE2E2",
+                120|        "on_bg": "#7F1D1D",
+                121|        "on_bg_muted": "#991B1B"122|
+            },
+            123|      {
+                124|        "name": "badge_warning",
+                125|        "kind": "solid",
+                126|        "bg": "#FEF3C7",
+                127|        "on_bg": "#78350F",
+                128|        "on_bg_muted": "#92400E"129|
+            },
+            130|      {
+                131|        "name": "badge_circuit_open",
+                132|        "kind": "solid",
+                133|        "bg": "#FFE4E6",
+                134|        "on_bg": "#881337",
+                135|        "on_bg_muted": "#9F1239"136|
+            }
+137|
+        ],
+        138|    "accent": "#373757",
+        139|    "on_accent": "#FFFFFF",
+        140|    "accent_hover": "#2B2B47",
+        141|    "brand_secondary": "#53537C",
+        142|    "ring": "#373757"143|
+    },
+    144|  "typography": {
+        145|    "font_family_heading": "Manrope, sans-serif",
+        146|    "font_family_body": "IBM Plex Sans, sans-serif",
+        147|    "font_family_mono": "IBM Plex Mono, monospace",
+        148|    "scale_px": {
+            149|      "display": 40,
+            150|      "h1": 32,
+            151|      "h2": 24,
+            152|      "h3": 20,
+            153|      "h4": 18,
+            154|      "body": 16,
+            155|      "caption": 14,
+            156|      "code": 13
+157|
+        },
+        158|    "css_import": "@import \"@fontsource-variable/manrope\";\n@import \"@fontsource/ibm-plex-sans\";\n@import \"@fontsource/ibm-plex-mono\";",
+        159|    "rules": {
+            160|      "headings": "font-bold tracking-tight text-slate-900 leading-tight",
+            161|      "body": "font-normal leading-relaxed text-slate-800 text-sm md:text-base",
+            162|      "metric_numbers": "font-mono font-bold tracking-tight text-slate-900 text-2xl lg:text-3xl",
+            163|      "labels": "text-xs font-semibold uppercase tracking-wider text-slate-500",
+            164|      "code_blocks": "font-mono text-xs leading-5"165|
+        }
+166|
+    },
+    167|  "entry_surfaces": {
+        168|    "/login": "split branded auth screen — left deep-navy positioning panel (#1E1E38) highlighting SAP S/4HANA to FinSight bridge architecture with Meridian Manufacturing credentials, right crisp white login form (#FFFFFF) with fast demo one-click logins and validation",
+        169|    "/": "command center enterprise dashboard — fixed 256px dark sidebar (#1E1E38), sticky white topbar (#FFFFFF), 4-column KPI metric summary row, live multi-currency INR pipeline status, and 2-column Recharts analytics grid on clean slate canvas (#F8FAFC)"170|
+    },
+    171|  "layouts": {
+        172|    "app_shell": "flex h-screen bg-slate-50 text-slate-900 overflow-hidden font-sans",
+        173|    "sidebar": "w-64 bg-[#1E1E38] text-slate-100 flex flex-col flex-shrink-0 border-r border-[#2D2D4D] z-30 select-none",
+        174|    "main_container": "flex-1 flex flex-col min-w-0 overflow-y-auto bg-slate-50",
+        175|    "header": "h-16 px-6 bg-white border-b border-slate-200 flex items-center justify-between sticky top-0 z-20 shadow-xs",
+        176|    "content_body": "p-6 md:p-8 space-y-6 max-w-7xl w-full mx-auto",
+        177|    "grid_kpi": "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5",
+        178|    "grid_2col": "grid grid-cols-1 lg:grid-cols-2 gap-6",
+        179|    "grid_3col": "grid grid-cols-1 md:grid-cols-3 gap-6",
+        180|    "bento_dashboard": "grid grid-cols-1 md:grid-cols-12 gap-6"181|
+    },
+    182|  "modules_breakdown": {
+        183|    "1_dashboard": {
+            184|      "title": "Executive Command Center",
+            185|      "components": [
+                186|        "KPI Cards: Total Records (12 SAP Domains), Success Sync Count, Failed Records, Pending Records, Overall API Success Rate (%), Consolidated Net Financial Flow (₹ INR with Cr/L units)",
+                187|        "Live Pipeline Status banner: SAP S/4HANA → Staging/Validation → FinSight Analytics Engine with latency & connection health",
+                188|        "Real-time Latency & Error Rate Area Chart (Recharts) for 24h timeline",
+                189|        "Sync Domain Health Matrix (12 domains quick badges: GL, AP, AR, Cost Centre, Profit Centre, Material Ledger, PO, SO, Fixed Assets, Bank Stmts, Budget, Inventory)",
+                190|        "Recent 10 Execution Audit Stream with Quick-Retry action",
+                191|        "Plant Operations Financial Quick-Bar (7 Indian Plants: Chakan-MH, Sriperumbudur-TN, Sanand-GJ, Baddi-HP, Jamshedpur-JH, Hosur-TN, Noida-UP)"192|
+            ]
+193|
+        },
+        194|    "2_sap_simulator": {
+            195|      "title": "SAP S/4HANA ERP Simulator",
+            196|      "components": [
+                197|        "12-Domain Selector tabs with record counts and SAP table technical codes (e.g. BSEG, BSAK, EKKO)",
+                198|        "Interactive 'Generate Mock SAP Batch' trigger (configurable 10 to 500 records, multi-currency USD/EUR/GBP/JPY/AED/INR, plant assignment, GST components CGST/SGST/IGST)",
+                199|        "Source Record Browser: Dense tabular grid with search, date filters, domain filters, status tags, right-aligned ₹ amounts",
+                200|        "Raw SAP IDoc / OData BAPI payload viewer modal with syntax-highlighted JSON viewer and copy button",
+                201|        "Bulk Action: 'Push to Ingestion Pipeline' with real-time feedback"202|
+            ]
+203|
+        },
+        204|    "3_api_management": {
+            205|      "title": "API Gateway & Endpoint Registry",
+            206|      "components": [
+                207|        "24 Endpoint Cards (12 SAP S/4HANA Source OData APIs + 12 FinSight REST Ingestion Endpoints)",
+                208|        "HTTP Method badges (GET, POST, PUT, PATCH)",
+                209|        "Interactive Live API Tester with custom parameter injection, live response status (200 OK / 400 Bad Request), latency meter in ms",
+                210|        "Swagger-style interactive JSON schema tabs for Request Body & Response Payload",
+                211|        "OAuth2 Bearer Token / API Key simulation headers drawer"212|
+            ]
+213|
+        },
+        214|    "4_data_transformation": {
+            215|      "title": "Data Transformation & Field Mapping Engine",
+            216|      "components": [
+                217|        "50+ Field Mapping Directory searchable across all 10+ financial domains (e.g., SAP 'WRBTR' → FinSight 'gross_amount_inr', SAP 'KOSTL' → 'cost_center_code')",
+                218|        "Live Currency Converter Tester (Real-time FX rates to ₹ INR: USD @ 83.45, EUR @ 90.10, GBP @ 105.80, JPY @ 0.54, AED @ 22.72)",
+                219|        "Date Normalizer & Fiscal Period Calculator (Mapping SAP YYYYMMDD to ISO-8601 & Indian Fiscal Year FY2025-26 Q1-Q4)",
+                220|        "Transformation Rules Sandbox: Paste SAP payload, run transform, view FinSight normalized object + validation diagnostic logs"221|
+            ]
+222|
+        },
+        223|    "5_data_synchronization": {
+            224|      "title": "Data Synchronization & ETL Runner",
+            225|      "components": [
+                226|        "Batch ETL Execution Panel: Select Domain, Batch Size (25, 50, 100, 500), Deduplication Strategy (Hash-check / Primary SAP Doc ID)",
+                227|        "Real-time Pipeline Progress Stepper: Extracting from SAP -> Validating -> FX Converting -> Ingesting to FinSight -> DB Committing",
+                228|        "Sync History Ledger: Comprehensive audit table with Timestamp (IST), Domain, Records Processed, Success %, Execution Duration (ms), Trigger Mode (Manual/Scheduled)",
+                229|        "Schedule Configuration card: Cron trigger intervals (Every 15m, Hourly, Daily at 00:00 IST)"230|
+            ]
+231|
+        },
+        232|    "6_reconciliation": {
+            233|      "title": "Financial Reconciliation & Integrity Ledger",
+            234|      "components": [
+                235|        "Source vs Destination Integrity Check Engine",
+                236|        "Debit vs Credit Totals Balance Card (SAP Total ₹ vs FinSight Ingested ₹ vs Variance ₹)",
+                237|        "Reconciliation Status breakdown: 100% Matched, Variance Flagged, Missing in Destination, Duplicate Blocked",
+                238|        "Mismatched Record Inspector: Side-by-side diff comparison showing exact delta field (e.g. ₹0.50 rounding error or missing CGST split)",
+                239|        "One-click 'Auto-Reconcile & Adjust' transaction action"240|
+            ]
+241|
+        },
+        242|    "7_error_management": {
+            243|      "title": "Error Classification & Circuit Breaker",
+            244|      "components": [
+                245|        "Error Category Badges (Schema Mismatch, Network Timeout, FX Rate Missing, SAP BAPI Auth Failure, Duplicate Constraint)",
+                246|        "Interactive Exponential Backoff Simulator (Retry Attempt 1: 2s, Attempt 2: 4s, Attempt 3: 8s, Attempt 4: DLQ)",
+                247|        "Circuit Breaker Status Panel (States: CLOSED [Normal], HALF-OPEN [Testing 5% traffic], OPEN [Tripped]) with manual reset button",
+                248|        "Dead-Letter Queue (DLQ) Management: View quarantined records, inspect failure reason stack-trace, edit payload inline and re-queue"249|
+            ]
+250|
+        },
+        251|    "8_monitoring": {
+            252|      "title": "System Telemetry & Health Monitoring",
+            253|      "components": [
+                254|        "12 Core Metric Cards (P95 Latency, P99 Latency, Throughput req/s, Error Rate %, Memory Consumption, Worker Pool Health, Ingestion Backlog, Redis Queue Depth, DB Connection Pool, GST Validation Pass Rate, Currency Freshness, Audit Compliance %)",
+                255|        "Interactive Alert Threshold Configurator (Sliders for Error Rate Alert %, Max Latency ms alert)",
+                256|        "Telemetry Line Charts: 24-hour Latency Trends and Throughput Volume",
+                257|        "India Data Residency & Compliance Indicator: All financial payload stored in Mumbai AWS region (ap-south-1) with Immutable Hash Audit Trail"258|
+            ]
+259|
+        },
+        260|    "9_financial_analytics": {
+            261|      "title": "FinSight Financial Analytics Suite",
+            262|      "components": [
+                263|        "Consolidated Executive Financial Summary: Total Revenue (₹ Cr), Operational Expenses (₹ Cr), Net EBITDA (₹ Cr), Operating Cash Flow (₹ Cr)",
+                264|        "Multi-domain Financial Flow Recharts (Revenue vs Cost trend by Month in Indian FY 2025-2026)",
+                265|        "Accounts Payable (AP) & Accounts Receivable (AR) Aging Bar Chart (0-30 Days, 31-60 Days, 61-90 Days, 90+ Days overdue in ₹)",
+                266|        "Plant-Wise Financial Matrix: Comparative Performance Table for all 7 Plants (Chakan, Sriperumbudur, Sanand, Baddi, Jamshedpur, Hosur, Noida) with Revenue, Expense, Tax Paid, and Sync Reliability %"267|
+            ]
+268|
+        }
+269|
+    },
+    270|  "meridian_manufacturing_context": {
+        271|    "organization": "Meridian Manufacturing Ltd",
+        272|    "headquarters": "Mumbai, Maharashtra, India",
+        273|    "base_currency": "INR (₹)",
+        274|    "plants": [
+            275|      {
+                "code": "PL-101",
+                "name": "Chakan Plant (Automotive Components)",
+                "state": "Maharashtra",
+                "gstin": "27AAACM1234F1Z5"
+            },
+            276|      {
+                "code": "PL-102",
+                "name": "Sriperumbudur Plant (Heavy Machinery)",
+                "state": "Tamil Nadu",
+                "gstin": "33AAACM1234F1Z8"
+            },
+            277|      {
+                "code": "PL-103",
+                "name": "Sanand Plant (Precision Engineering)",
+                "state": "Gujarat",
+                "gstin": "24AAACM1234F1Z2"
+            },
+            278|      {
+                "code": "PL-104",
+                "name": "Baddi Plant (Industrial Coatings)",
+                "state": "Himachal Pradesh",
+                "gstin": "02AAACM1234F1Z1"
+            },
+            279|      {
+                "code": "PL-105",
+                "name": "Jamshedpur Plant (Forging & Foundry)",
+                "state": "Jharkhand",
+                "gstin": "20AAACM1234F1Z4"
+            },
+            280|      {
+                "code": "PL-106",
+                "name": "Hosur Plant (Electrical Assemblies)",
+                "state": "Tamil Nadu",
+                "gstin": "33AAACM1234F1Z9"
+            },
+            281|      {
+                "code": "PL-107",
+                "name": "Noida Plant (Tooling & R&D)",
+                "state": "Uttar Pradesh",
+                "gstin": "09AAACM1234F1Z7"
+            }
+282|
+        ],
+        283|    "sap_domains": [
+            284|      {
+                "id": "gl",
+                "name": "General Ledger",
+                "sap_table": "BKPF/BSEG",
+                "doc_type": "FI-GL"
+            },
+            285|      {
+                "id": "ap",
+                "name": "Accounts Payable",
+                "sap_table": "BSIK/BSAK",
+                "doc_type": "FI-AP"
+            },
+            286|      {
+                "id": "ar",
+                "name": "Accounts Receivable",
+                "sap_table": "BSID/BSAD",
+                "doc_type": "FI-AR"
+            },
+            287|      {
+                "id": "cc",
+                "name": "Cost Centre Accounting",
+                "sap_table": "COEP/CSKS",
+                "doc_type": "CO-CCA"
+            },
+            288|      {
+                "id": "pc",
+                "name": "Profit Centre Accounting",
+                "sap_table": "GLPCA/CEPC",
+                "doc_type": "CO-PCA"
+            },
+            289|      {
+                "id": "ml",
+                "name": "Material Ledger",
+                "sap_table": "CKMLCR/MLDOC",
+                "doc_type": "CO-PC-ACT"
+            },
+            290|      {
+                "id": "po",
+                "name": "Purchase Orders",
+                "sap_table": "EKKO/EKPO",
+                "doc_type": "MM-PUR"
+            },
+            291|      {
+                "id": "so",
+                "name": "Sales Orders",
+                "sap_table": "VBAK/VBAP",
+                "doc_type": "SD-SLS"
+            },
+            292|      {
+                "id": "fa",
+                "name": "Fixed Assets",
+                "sap_table": "ANEP/ANLA",
+                "doc_type": "FI-AA"
+            },
+            293|      {
+                "id": "bs",
+                "name": "Bank Statements",
+                "sap_table": "FEBEP/FEBKO",
+                "doc_type": "FI-BL"
+            },
+            294|      {
+                "id": "bg",
+                "name": "Budget & Forecasting",
+                "sap_table": "BPJA/BPGE",
+                "doc_type": "CO-OM-CCA"
+            },
+            295|      {
+                "id": "inv",
+                "name": "Inventory & Valuation",
+                "sap_table": "MBEW/MARD",
+                "doc_type": "MM-IM"
+            }
+296|
+        ],
+        297|    "default_accounts": [
+            298|      {
+                "email": "admin@meridian.com",
+                "role": "admin",
+                "name": "Devendra Verma (Lead Architect)",
+                "badge": "Full Access"
+            },
+            299|      {
+                "email": "viewer@meridian.com",
+                "role": "viewer",
+                "name": "Pooja Hegde (Financial Auditor)",
+                "badge": "Read Only"
+            }
+300|
+        ]
+301|
+    },
+    302|  "motion": {
+        303|    "enabled": true,
+        304|    "reduced_motion_respect": true,
+        305|    "transitions": {
+            306|      "tab_switch": "transition-opacity duration-150 ease-in-out",
+            307|      "button_hover": "transition-colors duration-150 ease-in-out",
+            308|      "card_lift": "transition-all duration-200 ease-out hover:shadow-md hover:border-slate-300",
+            309|      "drawer_slide": "transition-transform duration-300 ease-in-out"310|
+        }
+311|
+    },
+    312|  "accessibility": {
+        313|    "wcag_level": "WCAG AA / APCA compliant",
+        314|    "color_contrast_ratios": {
+            315|      "on_bg_page": "14.2:1 (#0F172A on #F8FAFC)",
+            316|      "on_bg_muted": "5.6:1 (#475569 on #F8FAFC)",
+            317|      "on_panel": "15.8:1 (#0F172A on #FFFFFF)",
+            318|      "on_sidebar": "14.5:1 (#F8FAFC on #1E1E38)",
+            319|      "on_accent": "10.4:1 (#FFFFFF on #373757)"320|
+        },
+        321|    "aria_guidelines": [
+            322|      "All action buttons and icon buttons must feature aria-label attributes",
+            323|      "All data tables must include accessible <thead> with <th> scopes",
+            324|      "Tab panels must use role='tablist', role='tab', aria-selected, and aria-controls",
+            325|      "All interactive test components must include unique data-testid attributes"326|
+        ]
+327|
+    },
+    328|  "image_urls": [],
+    329|  "instructions_to_main_agent": [
+        330|    "1. THEME & PALETTE: Use #373757 as the primary brand color in Tailwind classes and CSS variables. Keep the background light (#F8FAFC) with pure white (#FFFFFF) container cards, sharp 1px borders (#E2E8F0), and dark slate text (#0F172A / #475569) to create a clean, modern, high-density enterprise SaaS appearance.",
+        331|    "2. SIDEBAR NAVIGATION: Implement a rich, collapsable/responsive left sidebar with #1E1E38 background, displaying the Meridian Manufacturing brand mark, status indicator ('CONNECTED TO S/4HANA v2023'), current active user badge, and direct navigation links to all 9 modules with Lucide icons.",
+        332|    "3. INDIAN MANUFACTURING & SAP LOCALIZATION: All monetary figures must be in INR (₹) with Indian Lakhs (₹ L) and Crores (₹ Cr) formatted numbers alongside standard decimals. Include the 7 Meridian Manufacturing plants (Chakan, Sriperumbudur, Sanand, Baddi, Jamshedpur, Hosur, Noida) and GST splits (CGST, SGST, IGST) in transaction simulators.",
+        333|    "4. MULTI-CURRENCY CONVERSION: Support source transactions in USD, EUR, GBP, JPY, AED, and INR with transparent exchange rate displays (e.g., USD @ 83.45 ₹) and converted amount logging in FinSight target records.",
+        334|    "5. DATA ACCURACY & LIVE SEED: Implement a rich backend seed script (backend/seed.py) providing 250+ realistic enterprise financial records across all 12 SAP domains, pre-configured 24 API endpoints, 50+ field mapping definitions, realistic reconciliation scenarios (including a few deliberate ₹ discrepancies to demo reconciliation diffs), and error logs.",
+        335|    "6. AUTH & USER ROLES: Pre-seed admin@meridian.com (password: 'meridian2026') and viewer@meridian.com (password: 'meridian2026'). Implement standard JWT cookie authentication, with convenient one-click demo login buttons on the login screen.",
+        336|    "7. RECHARTS COMPONENT USAGE: Build comprehensive interactive charts (Sync Latency, Throughput, Error Rate distribution, Financial Revenue vs Costs, AP/AR aging breakdown, and Plant Performance bar charts). Import Recharts cleanly according to the template rules.",
+        337|    "8. COMPLETE WORKING MODULES: Ensure all 9 required modules are fully functional with interactive actions (e.g. Generate Mock SAP Records, Trigger Live API Test, Run Field Transformation Test, Execute Batch ETL Sync, Run Reconciliation Engine, Retry Dead-Letter Queue Records, and Update Monitoring Thresholds).",
+        338|    "9. AUTOMATED TESTING SUPPORT: Add unambiguous kebab-case data-testid attributes to all buttons, navigation links, tabs, metric numbers, modals, and forms (e.g., data-testid='login-submit-button', data-testid='nav-sap-simulator', data-testid='run-etl-sync-btn', data-testid='reconcile-all-btn')."339|
+    ],
+    340|  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+        341|    "avoid_ai_slop": "Do not create empty generic placeholder cards. Every module must feature dense, populated, realistic financial data, precise column alignments, badge chips with semantic contrast, and crisp borders.",
+        342|    "no_universal_transition": "Use targeted transitions on specific elements (e.g. transition-colors duration-150 on hover:bg-slate-100) and NEVER 'transition: all' globally.",
+        343|    "no_center_aligned_apps": "App body and dashboard content must be left-aligned with structured flex and grid containers.",
+        344|    "sonner_toast": "Use Sonner for user action feedback (e.g. 'ETL Batch #4928 synced 50 records successfully to FinSight', 'Circuit breaker reset to CLOSED state', 'SAP Mock Batch generated').",
+        345|    "high_density_tables": "Tables in SAP Simulator, Data Mapping, Reconciliation, and Sync History should use dense padding (py-2.5 px-3.5) with mono-spaced numeric data and right-aligned currency columns."346|
+    }
+347|
+}
+348|
