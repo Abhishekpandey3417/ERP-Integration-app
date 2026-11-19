@@ -7,13 +7,11 @@ __pycache__/
 *.so
 .Python
 build/
+# Build & Distribution artifacts
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
-lib/
-lib64/
 parts/
 sdist/
 var/
@@ -23,6 +21,11 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
+
+# Explicitly ensure backend application library is tracked
+!app/backend/lib/
+!backend/lib/
+!lib/
 
 # Virtual Environments
 venv/
