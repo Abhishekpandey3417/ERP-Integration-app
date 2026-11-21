@@ -22,9 +22,12 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# Explicitly ensure backend application library is tracked
+# Explicitly ensure application libraries are tracked
 !app/backend/lib/
 !backend/lib/
+!app/frontend/src/lib/
+!frontend/src/lib/
+!src/lib/
 !lib/
 
 # Virtual Environments
