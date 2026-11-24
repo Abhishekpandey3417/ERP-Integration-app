@@ -1,0 +1,164 @@
+openapi: 3.0.3
+info:
+  title: Integration Bridge - SAP S/4HANA to FinSight Analytics API
+  description: Complete OpenAPI 3.0 specification covering 12 SAP source endpoints and 12 FinSight target endpoints for Meridian Manufacturing Ltd.
+  version: 1.0.0
+  contact:
+    name: Forward Deployed Engineering Team
+    email: fde-team@meridian.com
+servers:
+  - url: https://bridge.meridian.internal/api
+    description: Production Integration Gateway (AWS ap-south-1)
+  - url: http://127.0.0.1:8000/api
+    description: Local Development & Simulator Server
+
+paths:
+  /auth/login:
+    post:
+      summary: User Authentication & JWT Session Issuance
+      tags: [Authentication]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email: { type: string, example: "admin@meridian.com" }
+                password: { type: string, example: "meridian2026" }
+      responses:
+        '200':
+          description: Successfully authenticated; sets httpOnly cookie.
+        '401':
+          description: Invalid email or password.
+
+  /dashboard/summary:
+    get:
+      summary: Executive Command Center Overview
+      tags: [Dashboard]
+      responses:
+        '200':
+          description: Consolidated KPIs, domain health, and pipeline status.
+
+  /simulator/domains:
+    get:
+      summary: List 12 Monitored SAP ERP Domains
+      tags: [SAP Simulator]
+      responses:
+        '200':
+          description: 12 SAP domains with extraction statistics.
+
+  /simulator/generate:
+    post:
+      summary: Generate Simulated SAP Batches
+      tags: [SAP Simulator]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [domain, count]
+              properties:
+                domain: { type: string, example: "so" }
+                count: { type: integer, minimum: 10, maximum: 500, example: 50 }
+      responses:
+        '200':
+          description: Batch successfully generated into source staging.
+
+  /api-mgmt/endpoints:
+    get:
+      summary: List 24 Integration Endpoints
+      tags: [API Management]
+      responses:
+        '200':
+          description: 12 SAP source and 12 FinSight destination endpoints.
+
+  /mappings:
+    get:
+      summary: Retrieve 85 Field Mappings Catalog
+      tags: [Data Transformation]
+      responses:
+        '200':
+          description: Field transformation rules across 12 domains.
+
+  /mappings/test:
+    post:
+      summary: Execute Transformation Sandbox
+      tags: [Data Transformation]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [domain, payload]
+              properties:
+                domain: { type: string, example: "so" }
+                payload: { type: object }
+      responses:
+        '200':
+          description: Transformation steps, issues, and destination record.
+
+  /sync/run:
+    post:
+      summary: Trigger On-Demand ODP Delta Synchronization
+      tags: [Data Synchronization]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [domain, batch_size, strategy]
+              properties:
+                domain: { type: string, example: "so" }
+                batch_size: { type: integer, example: 50 }
+                strategy: { type: string, enum: [checksum, doc_id], example: "checksum" }
+                reprocess: { type: boolean, example: false }
+      responses:
+        '200':
+          description: Sync job record with extraction counts and status.
+        '409':
+          description: Circuit breaker is OPEN for this domain.
+
+  /recon/run:
+    post:
+      summary: Execute Double-Entry Reconciliation Run
+      tags: [Reconciliation]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                domain: { type: string, nullable: true, example: "so" }
+      responses:
+        '200':
+          description: Reconciliation report with debit/credit balance proofs.
+
+  /errors/circuit-breakers:
+    get:
+      summary: List 12 Domain Circuit Breakers
+      tags: [Error Management]
+      responses:
+        '200':
+          description: Current breaker state (closed, open, half-open).
+
+  /monitoring/metrics:
+    get:
+      summary: 12 Live System Telemetry Metrics
+      tags: [Monitoring]
+      responses:
+        '200':
+          description: 12 system observability metrics computed in real time.
+
+  /analytics/financial:
+    get:
+      summary: Consolidated INR Financial Analytics
+      tags: [Financial Analytics]
+      responses:
+        '200':
+          description: Revenue, EBITDA, cash flows, and AP/AR aging buckets.
